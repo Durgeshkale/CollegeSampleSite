@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCoE Nagpur</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-frame {
+            flex: 1;
+            border: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer {
+            position: relative;
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+        .navbar-brand {
+            font-size: 2rem;
+            font-style: italic;
+            font-weight: bold;
+            color: beige;
+        }
+        .carousel-container {
+            margin: 20px auto; /* Margin for spacing */
+            padding: 20px; /* Padding inside the carousel */
+            border: 2px solid #f9f6f6; /* Border around the carousel */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #fff; /* White background */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            max-width: 1200px; /* Maximum width */
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">GCoE Nagpur</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" target="content-frame" onclick="hideCarousel()">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="academics.html" target="content-frame" onclick="hideCarousel()">Academics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="departments.html" target="content-frame" onclick="hideCarousel()">Departments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="administration.html" target="content-frame" onclick="hideCarousel()">Administration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="students.html" target="content-frame" onclick="hideCarousel()">Students' Corner</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel for Sliding Images -->
+    <div class="carousel-container" id="carousel-container">
+        <div id="campusCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./gcoen2.jpg" class="d-block" alt="Campus Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="./clg1.jpg" class="d-block" alt="Campus Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="./clg2.jpg" class="d-block" alt="Campus Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="./clg3.jpg" class="d-block" alt="Campus Image 4">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#campusCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#campusCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Iframe to load sections -->
+    <iframe id="content-frame" name="content-frame" class="content-frame"></iframe>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 GCE Nagpur | All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function hideCarousel() {
+            document.getElementById('carousel-container').style.display = 'none'; // Hide the carousel
+        }
+    </script>
+</body>
+</html>
+
